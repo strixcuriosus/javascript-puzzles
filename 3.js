@@ -3,11 +3,11 @@
 // fix it to log out 12!
 
 function square(num) {
-  result = num * num
-  return result
+  var result = num * num;
+  return result;
 }
 
-result = square(4)
-result2 = square(2)
-var subtracted = result - result2
-console.log(subtracted)
+var result = square(4);
+var result2 = square(2);
+var subtracted = result - result2;
+console.log(subtracted);

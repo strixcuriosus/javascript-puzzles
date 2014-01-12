@@ -2,13 +2,18 @@
 // fix it to log 100, 200, 300, 400, 500 etc
 
 // loops 10 times from 0 - 1000 in increments of 100
-for (var i = 0; i < 1000; i += 100) {
-  waitFor(i, function then() {
-    console.log(i)
-  })
-}
 
 // this will run a callback function after waiting milliseconds
-function waitFor(milliseconds, callback) {
-  setTimeout(callback, milliseconds)
+var milliseconds = 0;
+function waitFor() {
+  if (milliseconds < 1000){
+   milliseconds += 100;
+   console.log(milliseconds);
+   setTimeout(waitFor, milliseconds);
+  }
 }
+
+waitFor();
+
+
+//originally the code not blocking -- keeps looping while waitFor is waiting.

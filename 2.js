@@ -16,4 +16,4 @@ function waitFor() {
 waitFor();
 
 
-//originally the code not blocking -- keeps looping while waitFor is waiting.
+//originally the code with a for loop was not blocking -- it kept looping while waitFor is waiting.
